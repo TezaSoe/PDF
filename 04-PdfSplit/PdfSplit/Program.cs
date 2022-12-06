@@ -16,7 +16,8 @@ namespace PdfSplit
             //SplitPdfWithSpecificContentForSAA_C03_3(); // v5.2.0
             //SplitPdfWithSpecificContentForDVA_C01_1(); // v4.10.0
             //SplitPdfWithSpecificContentForDVA_C01_2(); // v4.11.2
-            SplitPdfWithSpecificContentForSOA_C02_1(); // v3.7.2
+            SplitPdfWithSpecificContentForDVA_C01_3(); // v4.12.0
+            //SplitPdfWithSpecificContentForSOA_C02_1(); // v3.7.2
         }
 
         // v3.7.2
@@ -221,6 +222,280 @@ namespace PdfSplit
             System.Console.ReadKey();
         }
 
+        // v4.12.0
+        private static void SplitPdfWithSpecificContentForDVA_C01_3()
+        {
+            string pdfFilePath = @"C:\Users\HumanR0006\sample.pdf";
+            string outputPath = @"C:\Users\HumanR0006\PDF";
+            List<Content> contentList = new List<Content>();
+
+            // Section 3: Getting started with AWS
+            contentList.Add(new Content
+            {
+                contentName = "Section_03_Getting started with AWS",
+                startPage = 9,
+                numberOfPage = 10
+            });
+
+            // Section 4: IAM & AWS CLI
+            contentList.Add(new Content
+            {
+                contentName = "Section_04_IAM Section",
+                startPage = 19,
+                numberOfPage = 18
+            });
+
+            // Section 5: EC2 Fundamentals
+            contentList.Add(new Content
+            {
+                contentName = "Section_05_EC2 Basics",
+                startPage = 37,
+                numberOfPage = 33
+            });
+
+            // Section 6: EC2 Instance Storage
+            contentList.Add(new Content
+            {
+                contentName = "Section_06_EC2 Instance Storage Section",
+                startPage = 70,
+                numberOfPage = 23
+            });
+
+            // Section 7: AWS Fundamentals: ELB + ASG
+            contentList.Add(new Content
+            {
+                contentName = "Section_07_ELB,ASG & EBS",   // AWS Fundamentals – Part II
+                                                            // Load Balancing, Auto Scaling Groups and EBS Volumes
+                startPage = 93,
+                numberOfPage = 42
+            });
+
+            // Section 8: AWS Fundamentals: RDS + Aurora + ElastiCache
+            contentList.Add(new Content
+            {
+                contentName = "Section_08_RDS, Aurora & ElastiCache",   // AWS Fundamentals – Part III
+                startPage = 135,
+                numberOfPage = 29
+            });
+
+            // Section 9: Route 53
+            contentList.Add(new Content
+            {
+                contentName = "Section_09_Route 53 Section",
+                startPage = 164,
+                numberOfPage = 31
+            });
+
+            // Section 10: VPC Fundamentals
+            contentList.Add(new Content
+            {
+                contentName = "Section_10_VPC Primer", // Quick Overview of VPC
+                startPage = 195,
+                numberOfPage = 17
+            });
+
+            // Section 11: Amazon S3 Introduction
+            contentList.Add(new Content
+            {
+                contentName = "Section_11_Amazon S3",
+                startPage = 212,
+                numberOfPage = 25
+            });
+
+            // Section 12: AWS CLI, SDK, IAM Roles & Policies
+            contentList.Add(new Content
+            {
+                contentName = "Section_12_Developing on AWS", // CLI, SDK and IAM Policies
+                startPage = 237,
+                numberOfPage = 15
+            });
+
+            // Section 13: Advanced Amazon S3
+            contentList.Add(new Content
+            {
+                contentName = "Section_13_Advanced S3",
+                startPage = 252,
+                numberOfPage = 12
+            });
+
+            // Section 14: Amazon S3 Security
+            contentList.Add(new Content
+            {
+                contentName = "Section_14_Amazon S3 Security",
+                startPage = 264,
+                numberOfPage = 18
+            });
+
+            // Section 15: CloudFront
+            contentList.Add(new Content
+            {
+                contentName = "Section_15_CloudFront",
+                startPage = 282,
+                numberOfPage = 20
+            });
+
+            // Section 16: ECS, ECR & Fargate - Docker in AWS
+            contentList.Add(new Content
+            {
+                contentName = "Section_16_Container",
+                startPage = 302,
+                numberOfPage = 40
+            });
+
+            // Section 17: AWS Elastic Beanstalk
+            contentList.Add(new Content
+            {
+                contentName = "Section_17_AWS Elastic Beanstalk", // Deploying applications in AWS safely and predictably
+                startPage = 342,
+                numberOfPage = 31
+            });
+
+            // Section 18: AWS CICD: CodeCommit, CodePipeline, CodeBuild, CodeDeploy
+            contentList.Add(new Content
+            {
+                contentName = "Section_18_AWS CICD", // CodeCommit, CodePipeline, CodeBuild, CodeDeploy, …
+                startPage = 373,
+                numberOfPage = 39
+            });
+
+            // Section 19: AWS CloudFormation
+            contentList.Add(new Content
+            {
+                contentName = "Section_19_AWS CloudFormation", // Managing your infrastructure as code
+                startPage = 412,
+                numberOfPage = 43
+            });
+
+            // Section 20: AWS Monitoring & Audit: CloudWatch, X-Ray and CloudTrail
+            contentList.Add(new Content
+            {
+                contentName = "Section_20_AWS Monitoring, Troubleshooting & Audit", // CloudWatch, X-Ray and CloudTrail
+                startPage = 455,
+                numberOfPage = 49
+            });
+
+            // Section 21: AWS Integration & Messaging: SQS, SNS & Kinesis
+            contentList.Add(new Content
+            {
+                contentName = "Section_21_AWS Integration & Messaging", // SQS, SNS & Kinesis
+                startPage = 504,
+                numberOfPage = 63
+            });
+
+            // Section 22: AWS Serverless: Lambda
+            contentList.Add(new Content
+            {
+                contentName = "Section_22_AWS Lambda", // It’s a serverless world
+                startPage = 567,
+                numberOfPage = 61
+            });
+
+            // Section 23: AWS Serverless: DynamoDB
+            contentList.Add(new Content
+            {
+                contentName = "Section_23_DynamoDB", // NoSQL Serverless Database
+                startPage = 628,
+                numberOfPage = 47
+            });
+
+            // Section 24: AWS Serverless: API Gateway
+            contentList.Add(new Content
+            {
+                contentName = "Section_24_API Gateway", // Build, Deploy and Manage APIs
+                startPage = 675,
+                numberOfPage = 42
+            });
+
+            // Section 25: AWS Serverless: SAM - Serverless Application Model
+            contentList.Add(new Content
+            {
+                contentName = "Section_25_AWS Serverless Application Model (SAM)", // Taking your Serverless Development to the next level
+                startPage = 717,
+                numberOfPage = 9
+            });
+
+            // Section 26: Cloud Devlopment Kit(CDK)
+            contentList.Add(new Content
+            {
+                contentName = "Section_26_AWS Cloud Development Kit",
+                startPage = 726,
+                numberOfPage = 5
+            });
+
+            // Section 27: Cognito: Cognito User Pools, Cognito Identity Pools & Cognito Sync
+            contentList.Add(new Content
+            {
+                contentName = "Section_27_Amazon Cognito Section",
+                startPage = 731,
+                numberOfPage = 17
+            });
+
+            // Section 28: Other Serverless: Step Functions & AppSync
+            contentList.Add(new Content
+            {
+                contentName = "Section_28_Other Serverless Section",
+                startPage = 748,
+                numberOfPage = 19
+            });
+
+            // Section 29: Advanced Identity
+            contentList.Add(new Content
+            {
+                contentName = "Section_29_Advanced Identity Section",
+                startPage = 767,
+                numberOfPage = 22
+            });
+
+            // Section 30: AWS Security & Encryption: KMS, Encryption SDK, SSM Parameter Store, IAM & STS
+            contentList.Add(new Content
+            {
+                contentName = "Section_30_AWS Security & Encryption", // KMS, Encryption SDK, SSM Parameter Store
+                startPage = 789,
+                numberOfPage = 33
+            });
+
+            // Section 31: AWS Other Services
+            contentList.Add(new Content
+            {
+                contentName = "Section_31_Other AWS Services", // Quick overview of other services that might have questions on at the exam
+                startPage = 822,
+                numberOfPage = 9
+            });
+
+            // Section 32: AWS Final Cleanup
+            contentList.Add(new Content
+            {
+                contentName = "Section_32_Exam Review & Tips",
+                startPage = 831,
+                numberOfPage = 9
+            });
+
+            //// Section 33: Preparing for the Exam - AWS Certified Developer Associate
+            //contentList.Add(new Content
+            //{
+            //    contentName = "Section_33_Congratulations & Next Steps!",
+            //    startPage = 840,
+            //    numberOfPage = 30
+            //});
+
+            // Section 34: Congratulations - AWS Certified Developer Associate
+            contentList.Add(new Content
+            {
+                contentName = "Section_34_Congratulations & Next Steps!",
+                startPage = 840,
+                numberOfPage = 3
+            });
+
+            Program obj = new Program();
+            foreach (var content in contentList)
+            {
+                obj.SplitAndSaveInterval(pdfFilePath, outputPath, content.startPage, content.numberOfPage, content.contentName);
+                System.Console.WriteLine(content.contentName);
+            }
+            System.Console.WriteLine("Finished!");
+            System.Console.ReadKey();
+        }
+
         // v4.11.2
         private static void SplitPdfWithSpecificContentForDVA_C01_2()
         {
@@ -336,7 +611,7 @@ namespace PdfSplit
             // Section 16: ECS, ECR & Fargate - Docker in AWS
             contentList.Add(new Content
             {
-                contentName = "Section_16_Container Section",
+                contentName = "Section_16_Container",
                 startPage = 302,
                 numberOfPage = 40
             });
